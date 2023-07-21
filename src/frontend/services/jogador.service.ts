@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core"
-import { RestApi } from "common/restApi"
-import { Jogador,  ApiService } from "common"
-import { cache } from "common/cache"
+import { RestApi } from "commons/restApi"
+import { Jogador,  ApiService } from "commons"
+import { cache } from "commons/cache"
 import { CacheService } from "./cache.service"
 
 @Injectable({ providedIn: 'root' })

@@ -1,6 +1,6 @@
 import { IonicModule } from '@ionic/angular'
 import { Component } from '@angular/core'
-import { Jogador, Jogo, Questao, RestApi, waitAsync } from 'common'
+import { Jogador, Jogo, Questao, RestApi, waitAsync } from 'commons'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 import { HeaderComponent, FooterComponent } from 'components'

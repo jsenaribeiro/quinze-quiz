@@ -6,12 +6,14 @@
   "description": "Quiz do livro O Quinze",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "db": "json-server --watch ./assets/json/index.js --port 3210",
+    "dev": "ng serve",
+    "start": "concurrently --kill-others \"npm run start\" \"npm run db\"",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint",
-    "db": "json-server --watch ./assets/json/index.js --port 3210"
+    "lint": "ng lint"
+    
   },
   "private": true,
   "dependencies": {

@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+   app:
+      restart: always
+      build: frontend
+      image: quinze-quiz-app
+      container_name: quiz-app
+      ports: [80:80, 3210:3210]

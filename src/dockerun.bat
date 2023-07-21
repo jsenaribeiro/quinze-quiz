@@ -1,1 +1,1 @@
-docker compose up
+docker login && docker compose -f compose.yml build && docker compose -f compose.yml up
