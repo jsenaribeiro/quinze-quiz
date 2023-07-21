@@ -4,7 +4,8 @@ COPY . /src
 
 WORKDIR /src
 RUN apk add npm --update
-RUN npm i; npm i -g @ionic/cli
+RUN npm i
+#RUN; npm i -g @ionic/cli
 RUN ionic build --prod
 
 WORKDIR /src/releases
