@@ -1,0 +1,315 @@
+{
+   "imagens": [
+      "bg-app.jpg",
+      "bg-autora.jpg",
+      "bg-contexto.jpg",
+      "bg-livro.jpg",
+      "bg-jogo.jpg"
+   ],
+   "ranking": [
+      { "nome": "Fulano Tal", "pontuacao": 0 }
+   ],
+   "fases" : [{
+      "tipo": 1,
+      "imagem": 1,
+      "titulo": "Sobre a autora",
+      "introducao" : [
+         {
+            "titulo": "{SAUDACAO}, {JOGADOR}!",
+            "texto": "Nesta primeira fase do game, você vai conhecer um pouco sobre a vida de Rachel de Queiroz, autora da obra O Quinze."
+         },
+         {
+            "titulo": "Você sabe por que é importante conhecer a autora antes de ler sua obra?",
+            "texto": "A autora é fruto da época em que viveu e, dessa forma, carrega consigo princípios adquiridos desse período que revelam suas crenças e seus valores, desde a infância até a vida adulta, como convicções pessoais e aquilo que considera importante na sua vida."
+         },
+         {
+            "titulo": "E o que tudo isso tem a ver com a leitura da obra?",
+            "texto": "Pode não parecer, mas conhecer a experiência de vida da autora vai ajudar você a compreender informações, dentro da história, que revelarão convicções pessoais da autora sobre determinado assunto, ajudando, assim, você a entender melhor cada personagem e a interpretar, de forma mais crítica, os acontecimentos narrados na história."
+         },
+         {
+            "titulo": "Tem um exemplo?",
+            "texto": "Imagine, ao ler uma obra literária, situada em um contexto onde o papel da mulher na sociedade é desvalorizado, deparar-se com uma personagem mulher que não aceita a sua condição de submissão em relação às exigências da sociedade em que vive e, dessa forma, luta por igualdade de diretos, respeito e independência. E aí, imaginou? Então vamos lá! Em situações como essa, é bem possível que a autora, a partir de suas crenças e valores, tenha alguma relação com esse tipo de assunto e, como, possivelmente, identifica-se com o tema e apoia o empoderamento feminino, traz essa temática para sua obra. "
+         }
+      ],
+      "questoes": [
+         {
+            "texto":"Onde e quando Rachel de Queiroz nasceu? ",
+            "opcoes": [
+               { "texto": "São Paulo (SP), em 10 de maio de 1909", "pontos": 0 },
+               { "texto": "Fortaleza (CE), em 17 de novembro de 1910", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Qual o motivo da mudança de Rachel de Queiroz, ainda com sete anos, para o Rio de Janeiro em 1917?",
+            "opcoes": [
+              { "texto":  "Fugir dos horrores da seca de 1915", "pontos": 1 },
+               { "texto": "Morar com tios depois da morte dos pais ", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Em 1919, regressou a Fortaleza e, em 1921, matriculou-se no Colégio da Imaculada Conceição, onde fez o curso normal e, em 1925, aos 15 anos de idade:",
+            "opcoes": [
+              { "texto":  "Diplomou-se professora e passou a dar aulas ", "pontos": 0 },
+               { "texto": "Terminou o ensino médio e entrou na faculdade", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Aos 17 anos, em 1927, tornou-se redatora do jornal O Ceará.  E em fins de 1930, com 20 anos, publicou seu primeiro romance:",
+            "opcoes": [
+              { "texto":  "Memorial de Maria Moura", "pontos": 0 },
+               { "texto": "O Quinze ", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Em 1931, quando a escritora foi ao Rio de Janeiro receber o prêmio “Graça Aranha de Literatura” pelo o livro O Quinze, na categoria melhor romance. Que outro fato marcante na vida de Rachel de Queiroz ocorreu ainda em 1931?",
+            "opcoes": [
+              { "texto":  "Entrou para o Partido Comunista Brasileiro ", "pontos": 1 },
+               { "texto": "Casou-se com o poeta José Auto da Cruz Oliveira", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Em 1937, Rachel de Queiroz publicou o livro “O Caminho das Pedras”, abordando temáticas voltadas para agitações políticas, educação e participação feminina na vida pública. Além dessa obra, outro detalhe nesse mesmo ano chama a atenção na vida da escritora cearense. Qual foi esse detalhe?",
+            "opcoes": [
+              { "texto":  "Militou no Partido Comunista e, em 1937, foi presa por três meses por defender ideias esquerdistas", "pontos": 1 },
+               { "texto": "Colaborou semanalmente para “O Estado de São Paulo” e para o “Diário de Pernambuco, escrevendo mais de duas mil crônicas, que foram reunidas e publicadas em diversos livros", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Além de escritora, Rachel de Queiroz foi:",
+            "opcoes": [
+              { "texto":  "Jornalista, tradutora, deputada e professora", "pontos": 0 },
+               { "texto": "Professora, jornalista, tradutora e teatróloga", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Dentre os vários feitos de Rachel de Queiroz, que a colocam como uma mulher de destaque no cenário político e cultural brasileiro, podemos destacar, como um dos mais relevantes, o fato de ela:",
+            "opcoes": [
+              { "texto":  "Diplomar-se professora e ter vivido por quase cem anos de idade", "pontos": 0 },
+               { "texto": "Ser a primeira mulher a entrar para a Academia Brasileira de Letras ", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Onde, quando e como Rachel de Queiroz faleceu?",
+            "opcoes": [
+              { "texto":  "Fortaleza (CE), em 19 de setembro de 2000, de câncer ", "pontos": 0 },
+               { "texto": "Rio de Janeiro (RJ), em 4 de novembro de 2003, de um ataque cardíaco", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Podemos afirmar sobre Rachel de Queiroz, mulher, professora, escritora, jornalista, tradutora e teatróloga, a partir de um contexto social no qual a participação da mulher era limitada, que ela, por meio dos seus romances caracterizados pela denúncia social e, principalmente, pela sua militância política:",
+            "opcoes": [
+              { "texto":  "Trazia para suas obras as suas crenças, seus valores e seu posicionamento político", "pontos": 1 },
+               { "texto": "Produzia romances sem nenhuma relação com a realidade do seu tempo", "pontos": 0 }
+            ]
+         }
+      ]
+   },
+   {
+      "tipo": 1,
+      "imagem": 2,
+      "titulo": "Sobre o contexto",
+      "introducao" : [
+         {
+            "titulo": "{SAUDACAO}, {JOGADOR}!",
+            "texto": "Nesta segunda fase do game, você vai conhecer um pouco sobre o contexto histórico da obra O Quinze."
+         },
+         {
+            "titulo": "E aí, você sabe qual é a importância de conhecer o contexto histórico de uma obra?",
+            "texto": "Em uma obra como O Quinze, a autora não tira simplesmente da imaginação os personagens e os fatos narrados. Na verdade, ela se prende aos acontecimentos e às tradições da época na qual a história está sendo contada para criar os personagens e criar o enredo. Dessa forma, traços característicos dos personagens, como o discurso que eles utilizam no seu cotidiano, estão diretamente relacionados a um momento específico da história de um local."
+         },
+         {
+            "titulo": "Tem um exemplo?",
+            "texto": "Vamos pensar em uma história, nela brancos e negros são pessoas livres, porém os fatos narrados estão em um contexto histórico bem próximo do tempo quando ainda era permitido ter escravos no Brasil. Imaginou? Então valos lá! Em uma situação como essa, é bem possível que os personagens brancos manifestem discursos racistas para com os personagens negros, dado o contexto histórico no qual eles estão inseridos, isto é, como o tempo entre o período que havia escravidão e o momento que não há mais são bem próximos, as tradições da época ou o contexto histórico da época, como subjugar uma pessoa por causa da cor era tido como algo legal, produzem tais discursos. Ficou claro? Senão, procure entender o seguinte: saber o que está acontecendo em um determinado local e em uma determinada época ajuda a compreender melhor os personagens e os seus discursos. "
+         }
+      ],
+      "questoes": [{
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "Do início do século XXI, correspondendo aos dias atuais.", "pontos": 0 },
+            { "texto": "Do início do século XX, em 1915, mais de cem anos atrás.", "pontos": 1 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "27 anos após a abolição dos escravos no Brasil. No entanto, a pessoa negra ainda luta contra as desigualdades, a falta de oportunidade, o preconceito, a indiferença e se torna parte de um sistema de exclusão social.", "pontos": 1 },
+            { "texto": "27 anos após a abolição dos escravos no Brasil. A pessoa negra não enfrenta mais problemas, como o preconceito, a indiferença e não se torna mais parte de uma exclusão social de quando era escravo. ", "pontos": 0 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "A seca no Ceará em 1915 provocou uma grande migração de retirantes do interior do estado para a capital Fortaleza.", "pontos": 1 },
+            { "texto": "A seca no Ceará em 1915 não provocou a migração de retirantes do interior do estado para a capital Fortaleza.", "pontos": 0 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "O sertanejo não sofria com a chegada da seca. Em períodos de falta de chuva, o governo do estado supria todas as necessidades do homem do campo em relação à fome, ao desemprego e às doenças, o que não levava o sertanejo a buscar novos destinos. O sertanejo, com a sua família, continuava em suas casas, mesmo em condições adversas, já que recebiam ajuda do governo e, assim, não se deslocavam para a capital do estado, a procura de parentes ou de ajuda do governo, evitando, dessa forma, os deslocamentos em trens, animais ou a pé.", "pontos": 0 },
+            { "texto": "A classe social que mais é atingida com a chegada da seca é a do sertanejo. Em períodos de falta de chuva, a fome, o desemprego e as doenças são elevados a condições insuportáveis, levando o homem do campo a buscar novos destinos. O sertanejo, com a sua família, migra para lugares onde a condição de vida seja melhor, seja para a sede do município ou, muitas vezes, para a capital do estado, onde há parentes que possam ampará-los ou há ajuda do governo. O deslocamento é feito em carros, trens, animais ou, até mesmo, a pé.", "pontos": 1 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "O governo do estado do Ceará, atendendo à necessidade dos pobres, sem levar em conta as exigências dos ricos e afortunados, preocupados com o caos, a miséria, a moléstia e a sujeira, instalou um campo de concentração, chamado de Alagadiço, no centro da cidade de Fortaleza, com o objetivo de ajudar os retirantes a chegarem a Fortaleza.", "pontos": 0 },
+            { "texto": "O governo do estado do Ceará, atendendo as exigências dos ricos e afortunados de Fortaleza, construiu um campo de concentração para receber os retirantes, chamado de Alagadiço, nas proximidades da capital cearense, com o objetivo de evitar que eles chegassem a Fortaleza, trazendo o caos, a miséria, a moléstia e a sujeira. ", "pontos": 1 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "Os retirantes alojados no campo de concentração, também chamado de Currais Humanos ou Currais do Governo, recebiam todo tipo de cuidado e comida de que precisavam, vivendo sempre sem a necessidade de trabalho ou de vigilância.", "pontos": 0 },
+            { "texto": "Os retirantes alojados no campo de concentração, também chamado de Currais Humanos ou Currais do Governo, recebiam algum cuidado e comida, em troca eram colocados para trabalhar, sempre sob a vigilância de soldados.", "pontos": 1 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "No final do século XIX e início do século XX, a região Nordeste se transformou em uma área de repulsão populacional, devido ao ciclo da borracha ocorrido na Amazônia, no qual milhares de nordestinos, quase sempre fugindo da seca, foram para as áreas de extração do látex, nos estados do Pará e do Amazonas.", "pontos": 1 },
+            { "texto": "No final do século XIX e início do século XX, a região Nordeste se transformou em uma área de atração populacional, devido às condições favoráveis do clima para a agricultura e a criação de gado, no qual milhares de pessoas, de várias partes do país, migraram para estados nordestinos, como o Ceará e Piauí.", "pontos": 0 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "A partir de meados do século XIX, a região nordeste passou a concentrar as decisões políticas do país e as principais atividades econômicas, enquanto o Sul e o Sudeste continuavam numa realidade agrária, tendo suas economias voltadas, principalmente, para a agricultura e criação de gado nos primeiros anos do século XX. ", "pontos": 0 },
+            { "texto": "A partir de meados do século XIX, as regiões Sul e Sudeste passaram a concentrar as decisões políticas do país e as principais atividades econômicas, enquanto o Nordeste continuava numa realidade agrária, tendo sua economia voltada, principalmente, para a agricultura e criação de gado nos primeiros anos do século XX. ", "pontos": 1 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "As mulheres eram vistas como iguais aos homens e, dessa forma, tinham os mesmos direitos que os homens, como, por exemplo, elas podiam votar. No casamento, da mesma forma que os homens, elas podiam se divorciar. Assim como o marido, elas tinham o direito de separar-se caso descobrissem que o marido não era virgem antes do casamento. Além disso, homens e mulheres tinham que pedir autorização um ao outro para trabalhar.", "pontos": 0 },
+            { "texto": "As mulheres não eram vistas como iguais aos homens e, dessa forma, não tinham os mesmos direitos que os homens, como, por exemplo, elas não podiam votar. No casamento, elas não podiam se divorciar. Já o marido tinha o direito de se separar de sua esposa se descobrisse que ela não era virgem antes do casamento. Além disso, as mulheres tinham que pedir autorização ao marido para trabalhar.", "pontos": 1 }
+         ]
+      },
+      {
+         "texto":"Os fatos narrados no livro O Quinze estão relacionados a que contexto histórico?",
+         "opcoes":[
+            { "texto": "O nordestino está fortemente ligado aos costumes religiosos, principalmente, às rezas. Segundo a crença do sertanejo, o que acontece no sertão é por vontade de Deus e o homem não pode mudar isso. Dessa forma, o misticismo religioso, a fé do sertanejo, é manifestado na forma de apelo aos santos, na tentativa de encontrar refúgio diante tanto sofrimento. O sertanejo vê a seca como um castigo divino para pagar os pecados cometidos.", "pontos": 1 },
+            { "texto": "O nordestino não está ligado aos costumes religiosos, principalmente, às rezas. Segundo a crença do sertanejo, o que acontece no sertão não é por vontade de Deus, mas culpa somente do homem e, dessa forma, só ele pode mudar isso. O misticismo religioso, a fé do sertanejo, é manifestado na forma de prece aos santos, na tentativa de encontrar apenas paz espiritual. O sertanejo não vê a seca como um castigo de Deus para pagar os pecados cometidos.", "pontos": 0 }
+         ]
+      }]      
+   },
+   {
+      "tipo": 0,
+      "imagem": 3,
+      "titulo": "Sobre a livro",
+      "introducao" : [
+         {
+            "titulo": "{SAUDACAO}, {JOGADOR}!",
+            "texto": "Nesta terceira fase do game, você vai conhecer um pouco sobre a narrativa da obra O Quinze."
+         },
+         {
+            "titulo": "E aí, ao ler uma obra como O Quinze, você sabe identificar os elementos que compõem a narrativa?",
+            "texto": "A narrativa constitui-se de cinco elementos que ajudam a desenvolver a história contada em uma obra. Os personagens, por exemplo, são apenas um desses elementos. Além deles, é possível identificar o tempo, que revela quando os fatos estão acontecendo; o espaço, que informa onde tudo está acontecendo; o foco narrativo, que permite saber quem está contando a história e, por fim, o enredo, que expõe os personagens e a sucessão de acontecimentos narrados. Para entendermos melhor o que está sendo contado, é preciso que todos esses elementos estejam presentes e interligados."
+         },
+         {
+            "titulo": "Tem um exemplo?",
+            "texto": "Vamos lá! Imagine ler um romance como O Quinze e não encontrar nenhum personagem. E aí? Difícil, né? Agora, pense também na leitura dessa obra e não identificar onde e quando os personagens estão situados e nem saber em que lugar ou em que época os acontecimentos estão sendo contados. Também fica difícil, né? E, finalmente, imagine como seria começar a ler O Quinze e não ter um assunto, um conflito para a história e nem os fatos e os personagens para serem narrados. É complicado até de imaginar, né? É isso que acontece quando imaginamos uma narrativa sem enredo. E aí? Ficou claro agora? Esses elementos são essenciais numa narrativa e faltando um deles, a história fica mal contada"
+         }
+      ],
+      "questoes": [
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "A obra foi publicada em 1930 e, dessa forma, expõe a situação econômica, política, social e cultural da época", "pontos": 1 },
+               { "texto": "A obra foi publicada em 1930, entretanto, não expõe a situação econômica, política, social e cultural da época ", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "É uma ficção e não retrata nada da realidade", "pontos": 0 },
+               { "texto": "É uma história baseada em fatos reais", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "A história se passa durante a seca de 1915", "pontos": 1 },
+               { "texto": "A história se passa nos dias atuais", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "Os acontecimentos narrados ocorrem no estado do Ceará", "pontos": 1 },
+               { "texto": "Os acontecimentos narrados ocorrem no estado do Rio de Janeiro", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "A obra mostra a seca de 1915 que assolou o Sul e o Sudeste do país", "pontos": 0 },
+               { "texto": "A obra mostra a seca de 1915 que assolou o Nordeste brasileiro", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+              { "texto":  "Expõe a luta do povo cearense do campo contra os problemas da seca", "pontos": 1 },
+               { "texto": "Expõe a luta do povo carioca do campo contra os problemas da seca ", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "A narradora é um dos personagens. Ela vivencia os fatos e conta a história", "pontos": 0 },
+               { "texto": "A narradora não é um dos personagens. Ela apenas observa e conta a história", "pontos": 1 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "A obra, além de expor a realidade da época da seca de 1915, expõe também a experiência de vida e as convicções pessoais da autora.", "pontos": 1 },
+               { "texto": "A obra, além de não expor a realidade da época da seca de 1915, não expõe também a experiência de vida e as convicções pessoais da autora.", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "É um romance de denúncia social, pois aborda não somente o assunto sobre a seca, mas também temáticas sobre desigualdade social, religiosidade, machismo, racismo, descaso do poder público diante dos mais necessitados e, dentre outros pontos, a condição da mulher na sociedade da época.", "pontos": 1 },
+               { "texto": "Não é um romance de denúncia social, pois só aborda o assunto sobre a seca. Já outras temáticas, como desigualdade social, religiosidade, machismo, racismo, descaso do poder público diante dos mais necessitados e, dentre outros pontos, a condição da mulher na sociedade da época, não são tratadas. ", "pontos": 0 }
+            ]
+         },
+         {
+            "texto":"Sobre o livro O Quinze de Raquel de Queiroz",
+            "opcoes": [
+               { "texto": "Com o fim da seca de 1915, os principais personagens não chegam ao final da história com seus objetivos alcançados, mesmo sobrevivendo, com grande custo, aos horrores do longo período sem chuva. Além disso, os acontecimentos narrados na obra O Quinze e o seu desfecho não devem levar o leitor à reflexão sobre as temáticas abordadas e a sua relação tanto com a sociedade da época da história do livro quanto com a dos dias de hoje, já que tais fatos não são mais comuns atualmente. ", "pontos": 0 },
+               { "texto": "Com o fim da seca de 1915, os principais personagens chegam ao final da história com seus objetivos alcançados, sobrevivendo, com grande custo, aos horrores do longo período sem chuva. No entanto, os acontecimentos narrados na obra O Quinze e o seu desfecho ainda são comuns atualmente e, portanto, devem levar o leitor à reflexão sobre as temáticas abordadas e a sua relação tanto com a sociedade da época da história do livro quanto com a dos dias de hoje.", "pontos": 1 }
+            ]
+         }
+      ]      
+   },
+   {
+      "tipo": 1,
+      "imagem": 4,
+      "introducao": [
+         {
+            "titulo": "Titulo de exemplo?",
+            "texto": "Esse é um parágrafo de exemplo para a fase final"
+         }
+      ],
+      "questoes": [{         
+         "texto": "Pergunta 1 de exemplo da fase final",
+         "opcoes": [
+            { "texto": "Opcao 1", "pontos": 0 },
+            { "texto": "Opcao 2", "pontos": 1 },
+            { "texto": "Opcao 3", "pontos": 2 },
+            { "texto": "Opcao 4", "pontos": 3 }
+         ]
+      },
+      {         
+         "texto": "Pergunta 2 de exemplo da fase final",
+         "opcoes": [
+            { "texto": "Opcao 1", "pontos": 0 },
+            { "texto": "Opcao 2", "pontos": 1 },
+            { "texto": "Opcao 3", "pontos": 2 },
+            { "texto": "Opcao 4", "pontos": 3 }
+         ]
+      }]
+   }]
+}

@@ -1,0 +1,30 @@
+<quiz-header 
+   [username]="db.jogador.nome" 
+   [scoring]="db.jogador.pontuacao"
+   [ranking]="db.jogador.ranking || 1" />
+
+<ion-content [fullscreen]="true">
+   <main class="container">
+      <section id="status" *ngIf="!respondeu">
+         <b>Fase {{ db.jogador.faseId + 1 }} | </b>
+         <b>Questao {{ db.jogador.questaoId + 1 }}</b>
+      </section>
+      
+      <section *ngIf="!respondeu">      
+         <strong>{{ db.questao.texto }}</strong>
+         <button (click)="onResposta(opcao.texto)"
+            *ngFor="let opcao of db.questao.opcoes; let i=index;" [disabled]="loading" >
+            <pre>{{ getLetra(i) }}</pre>
+            <aside>{{ opcao.texto }}</aside>
+         </button>
+      </section>   
+      
+      <section id="feed" *ngIf="respondeu">
+         <h1 *ngIf="acertou">Parabéns, você acertou! Ganhou 1 ponto!</h1>      
+         <h1 *ngIf="!acertou">Você errou!</h1>
+         <h3 *ngIf="!acertou">A resposta correta é</h3>
+         <h4 *ngIf="!acertou">{{ correta }}</h4>
+      </section>      
+   </main>
+</ion-content>
+

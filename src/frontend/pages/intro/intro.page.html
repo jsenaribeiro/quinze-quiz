@@ -1,0 +1,14 @@
+<quiz-header 
+   [username]="jogador.nome" 
+   [scoring]="jogador.pontuacao"
+   [ranking]="jogador.ranking || 1" />
+
+<ion-content [fullscreen]="true">   
+   <main class="container">
+      <strong>{{ introducao.titulo }}</strong>
+      <article>{{ introducao.texto }}</article>
+   </main>
+</ion-content>
+
+<quiz-footer [index]="index" [total]="total" 
+   (change)="index=$event" (latest)="onLatest()" />

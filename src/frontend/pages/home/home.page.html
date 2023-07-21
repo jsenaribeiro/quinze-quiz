@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-title>
+			O QUINZE APP
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">O Quinze</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<div id="container">
+		<strong>Entrar no jogo</strong>
+		<p>Digite o seu nome e sobrenome:</p>
+		<br/>
+		<ion-item>
+         <ion-input label="Jogador" [(ngModel)]="usuario" />
+       </ion-item>
+
+       <ion-button (click)="onClick()">Entrar</ion-button>
+	</div>
+</ion-content>

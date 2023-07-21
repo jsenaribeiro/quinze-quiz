@@ -1,0 +1,5 @@
+export * from './app.service'
+export * from './jogador.service'
+export * from './jogo.service'
+export * from './api.service'
+export * from './cache.service'

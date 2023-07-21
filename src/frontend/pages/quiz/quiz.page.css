@@ -1,0 +1,44 @@
+button {
+   padding: 10px;
+   display: grid;
+   align-items: center;
+   border-radius: var(--roundness);
+   background: var(--ion-color-primary);
+   grid-template-columns: 25px 1fr;
+   white-space: pre-wrap;
+   margin-bottom: 10px;
+   width: 100%;
+}
+
+button > * {
+   margin: 0;
+   padding: 5px;
+}
+
+button > pre {
+   font-size: 2rem;
+   padding-right: 1.9rem;   
+   border-right: dotted 2px var(--ion-color-warning);
+   color: var(--ion-color-warning);
+   font-weight: bold;
+}
+
+button > aside {
+   padding-left: 20px;
+   text-align: justify;
+   color: var(--ion-color-light);
+}
+
+button:hover {
+   filter: invert(1)
+}
+
+strong {
+   display: block;
+   font-size: 1.3rem;
+   margin-bottom: 20px;
+}
+
+#status {
+   opacity: 0.75;
+}
