@@ -6,8 +6,8 @@ ENV JSON_SVC="json-server --watch ${IDX_PATH} --port 3210"
 RUN apk add npm --update
 RUN npm i json-server -g
 RUN rm -rf ${NGX_PATH}/html/*
+COPY ./builds ${NGX_PATH}/html
 COPY ./assets ${NGX_PATH}/assets
-COPY ./compileds ${NGX_PATH}/html
 COPY ./default.conf ${NGX_CONF}/default.conf
 #USER 0
 ENTRYPOINT chown -R 1000 ${NGX_PATH}/assets; \

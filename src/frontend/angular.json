@@ -20,7 +20,7 @@
                "options": {
                   "main": "index.ts",
                   "index": "index.html",
-                  "outputPath": "compileds",
+                  "outputPath": "builds",
                   "polyfills": "polyfills.ts",
                   "tsConfig": "tsconfig.app.json",
                   "inlineStyleLanguage": "scss",

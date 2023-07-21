@@ -3,7 +3,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'Quiz',
-  webDir: 'releases',
+  webDir: 'builds',
   server: { androidScheme: 'https' }
 };
 
