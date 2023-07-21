@@ -1,9 +1,9 @@
 {
   "name": "Quiz",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Jonathan SR",
   "homepage": "https://ionicframework.com/",
-  "description": "An Ionic project",
+  "description": "Quiz do livro O Quinze",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -42,7 +42,7 @@
     "@angular/compiler-cli": "16",
     "@angular/language-service": "16",
     "@capacitor/cli": "5",
-    "@ionic/angular-toolkit": "9",
+    "@ionic/angular-toolkit": "10",
     "@types/node": "12",
     "@typescript-eslint/eslint-plugin": "5",
     "@typescript-eslint/parser": "5",
