@@ -1,4 +1,4 @@
 export default {
   production: true,
-  baseURL: "http://localhost/db"
+  baseURL: "http://localhost/api"
 };
