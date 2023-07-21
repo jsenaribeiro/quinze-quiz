@@ -9,7 +9,7 @@ RUN rm -rf ${NGX_PATH}/html/*
 COPY ./assets ${NGX_PATH}/assets
 COPY ./compileds ${NGX_PATH}/html
 COPY ./default.conf ${NGX_CONF}/default.conf
-USER 0
+#USER 0
 ENTRYPOINT chown -R 1000 ${NGX_PATH}/assets; \
            nginx -g 'daemon off;' & ${JSON_SVC}
 
