@@ -10,7 +10,7 @@
       { "nome": "Fulano Tal", "pontuacao": 0 }
    ],
    "fases" : [{
-      "tipo": 1,
+      "tipo": 0,
       "imagem": 1,
       "titulo": "Sobre a autora",
       "introducao" : [
@@ -105,7 +105,7 @@
       ]
    },
    {
-      "tipo": 1,
+      "tipo": 0,
       "imagem": 2,
       "titulo": "Sobre o contexto",
       "introducao" : [
