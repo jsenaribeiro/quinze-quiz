@@ -6,7 +6,7 @@
   "description": "Quiz do livro O Quinze",
   "scripts": {
     "ng": "ng",
-    "db": "json-server --watch ./assets/json/index.js --port 3210",
+    "db": "json-server --watch ./assets/json/index.js --port 3333",
     "dev": "ng serve",
     "start": "concurrently --kill-others \"npm run start\" \"npm run db\"",
     "release": "ng build --configuration production",

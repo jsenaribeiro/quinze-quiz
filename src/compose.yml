@@ -5,4 +5,4 @@ services:
       build: frontend
       image: quinze-quiz-app
       container_name: quiz-app
-      ports: [80:80, 3210:3210]
+      ports: [80:80]

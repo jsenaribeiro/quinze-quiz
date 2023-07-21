@@ -2,7 +2,7 @@ FROM nginx:alpine
 ENV NGX_PATH="/usr/share/nginx"
 ENV NGX_CONF="/etc/nginx/conf.d"
 ENV IDX_PATH="${NGX_PATH}/assets/json/index.js"
-ENV JSON_SVC="json-server --watch ${IDX_PATH} --port 3210"
+ENV JSON_SVC="json-server --watch ${IDX_PATH} --port 3333"
 RUN apk add npm --update
 RUN npm i json-server -g
 RUN rm -rf ${NGX_PATH}/html/*

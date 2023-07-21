@@ -1,8 +1,9 @@
+import environments from "environments"
 import { cache } from "./cache"
 
-const BASE_URL = "http://localhost:3210"
-
 type Api = "/jogo"|"/jogadores"
+
+const BASE_URL = environments.baseURL
 
 const cacheKey = {
    "/jogo": "jogo",
