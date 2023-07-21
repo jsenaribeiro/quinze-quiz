@@ -1,0 +1,17 @@
+[Pessoa|nome;cpf]
+[Aluno|nome; cpf]
+[Professor]
+[Questao|texto; imagem; perguntas; correta]
+[Avaliacao]
+[Dashboard|qtdAlunos; pontosPorAcerto; | ranking(filtro); cadastrar(gameficado?)]
+
+[Pessoa]^-é[Aluno]
+[Pessoa]^-é[Professor]
+
+[Professor]<>cria-1>[Avaliacao]
+[Dashboard]<-acessa[Professor]
+
+[Aluno]<>faz-1>[Avaliacao]
+[Avaliacao]-4>[Questao]
+[Questao]-4>[Pergunta]
+

@@ -1,0 +1,5 @@
+frontend
+- final da segunda fase falha (questao qq)
+- corrigir paginacao de voltar na intro (desabilita)
+- criar outras imagens
+- criar ranking

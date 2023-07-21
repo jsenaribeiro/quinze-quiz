@@ -1,0 +1,12 @@
+<ion-footer class="ion-text-center">
+   <ion-button [disabled]="begin" (click)="onStep(true)">&lt;</ion-button>
+   
+   <section>
+      <label>{{ index + 1 }}</label>
+      / <label>{{ total }}</label>
+   </section>
+
+   <ion-button [disabled]="final" (click)="onStep(false)">&gt;</ion-button>  
+        
+   <ion-button *ngIf="final" (click)="latest.emit()">Iniciar</ion-button>
+</ion-footer>

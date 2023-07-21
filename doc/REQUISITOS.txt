@@ -1,0 +1,43 @@
+geral
+- cada pergunta em um quadrado
+- 2 opcoes (1 correta)
+- para autora perguntas em uma dada ordem
+- para contexto ordem definida pelo usuario
+- 1 ponto por questoes
+- 4 fases
+- 3 primeiras fases = 30 pontos (1 por questao, 10 perguntas)
+- 4a fase = 70 pontos (distribuir os pontos entre as questoes)
+
+FASES
+- sobre a autora
+- sobre o contexto histórico
+- sobre o livro
+- sobre... ?
+- final: ranking geral
+
+- SISTEMA DE REF: https://wordwall.net/pt/resource/1632087/fato-ou-opini%C3%A3o
+
+autenticacao
+- ao entrar no sistema digita o nome
+- autenticacao: primeiro nome + ultimo nome
+
+MECANICA
+- imagem de plano de fundo temática
+- clica nas opcoes e ao clicar gera um destaque
+- ao responder, feedback se acertou
+
+RANKING
+- ranking geral
+- ranking por fase
+
+ADMINISTRADOR
+- tabela por jogador/fase
+
+REGRAS
+- 5 vidas por usuário (tentativas)
+- ao zerar as vidas reinicia a fase
+- ganhar 1 vida ao passar de fase
+- salvar o progresso de cada pergunta
+- reiniciar a fase com a quantidade que iniciou a fase
+- quantificar tempo de cada tela no jogador
+- imagem background por fase

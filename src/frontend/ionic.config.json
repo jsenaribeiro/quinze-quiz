@@ -1,0 +1,5 @@
+{
+  "name": "Quiz",
+  "type": "angular-standalone",
+  "integrations": { "capacitor": {} }
+}
