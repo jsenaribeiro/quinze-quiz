@@ -2,9 +2,9 @@ import { Jogador, Jogo, Questao } from "./models"
 
 export interface ApiService<T> {
    search(): Promise<T|T[]>
-   create(data: T): Promise<void>
-   update(data: T): Promise<void>
-   delete(): Promise<void>
+   create(data: T): Promise<any>
+   update(data: T): Promise<any>
+   delete(): Promise<any>
 }
 
 export interface FaseRequest {

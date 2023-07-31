@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms'
 import { HeaderComponent, FooterComponent } from 'components'
 import { ApiService, AppService, JogadorService } from 'services'
 import { Router } from '@angular/router'
-import { CacheService } from 'services/cache.service'
+import { NowService } from 'services/now.service'
 
 const imports = [IonicModule, CommonModule, FormsModule, HeaderComponent, FooterComponent]
 
@@ -19,10 +19,10 @@ const imports = [IonicModule, CommonModule, FormsModule, HeaderComponent, Footer
 }) export class QuizPage {
    constructor(
       public app: AppService, 
-      public db: CacheService, 
+      public now: NowService, 
       public api: ApiService,
       public router: Router) { 
-         this.app.changeBackground(db.imagem)
+         this.app.changeBackground(now.imagem)
    }
 
    public correta = ""
@@ -34,7 +34,7 @@ const imports = [IonicModule, CommonModule, FormsModule, HeaderComponent, Footer
    public getLetra = (i:number) => String.fromCharCode(i+65)
 
    public async onResposta(resposta: string) {
-      this.correta = this.db.questao.opcoes
+      this.correta = this.now.questao.opcoes
          .filter(x => x.pontos > 0)
          .map(x => x.texto)
          .find(_ => true)  ?? ""
@@ -42,20 +42,20 @@ const imports = [IonicModule, CommonModule, FormsModule, HeaderComponent, Footer
       this.acertou = resposta == this.correta
       this.respondeu = true
 
-      const opcao = this.db.questao.opcoes
+      const opcao = this.now.questao.opcoes
          .filter(x => x.texto == resposta)
          .find(_ => true)
 
       if (opcao === undefined) 
          throw `OpcaoId nao encontrada... `
 
-      const jogador = {...this.db.jogador}
+      const jogador = {...this.now.jogador}
 
-      const ultimaFase = this.db.jogo.fases.length-1 == jogador.faseId
-      const ultimaQuestao = this.db.fase.questoes.length-1 == jogador.questaoId
+      const ultimaFase = this.now.isLatest("fase")
+      const ultimaQuestao = this.now.isLatest("questao")
       const ultimoTudo = ultimaQuestao && ultimaFase
 
-      const opcaoId = this.db.getIndex("opcao", resposta)
+      const opcaoId = this.now.getIndex("opcao", resposta)
       const espera = 150 + (this.acertou ? 0 : this.correta.length * 3)
 
       console.debug(0, jogador)
@@ -63,19 +63,18 @@ const imports = [IonicModule, CommonModule, FormsModule, HeaderComponent, Footer
       
       if (ultimoTudo) console.warn('finalizou...')
 
-      jogador.pontuacao += opcao.pontos
+      jogador.pontos += opcao.pontos
 
-      jogador.respostas.push({
-         texto: resposta,
-         opcaoId: opcaoId,
-         faseId: opcao.faseId,
-         questaoId: opcao.questaoId
-      })         
+      jogador.respondidas.push({
+         certo: this.acertou,
+         jogador: jogador.nome,
+         respondido: resposta,
+         progresso: jogador.progresso
+      })
 
-      jogador.faseId += (ultimaQuestao ? 1 : 0)
-      jogador.questaoId += (ultimaQuestao ? -jogador.questaoId : 1)
+      const newJogador = this.now.gotoNext()
 
-      await this.api.jogador.update(jogador)
+      await this.api.jogador.update(newJogador)
 
       if (ultimaQuestao) this.router.navigateByUrl("/intro")
       if (ultimoTudo) this.router.navigateByUrl('/final')

@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core"
-import { CacheService } from "./cache.service"
+import { NowService } from "./now.service"
 
 @Injectable({providedIn: 'root'})
 export class AppService{
-   constructor(private cache: CacheService ){}
+   constructor(private now: NowService ){}
 
    public changeBackground(filename: string = "") {
-      filename = filename || this.cache.imagem
+      filename = filename || this.now.imagem
 
       const root = document.querySelector(':root') as any
       const mode = this.isDarkMode ? 'dark' : 'light'

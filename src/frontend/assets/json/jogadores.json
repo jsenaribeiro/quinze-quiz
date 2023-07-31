@@ -1,8 +1,7 @@
 [{
    "id": 1,
    "nome": "Fulano",
-   "faseId": 0,
-   "questaoId": 0,
    "respostas": [],
-   "pontuacao": 0
+   "pontuacao": 0,
+   "progresso": 0.0
 }]

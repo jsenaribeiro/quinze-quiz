@@ -7,7 +7,7 @@
       "bg-jogo.jpg"
    ],
    "fases" : [{
-      "imagem": 1,
+      "imagemId": 1,
       "titulo": "Sobre a autora",
       "introducao" : [
          {
@@ -52,7 +52,7 @@
       ]
    },
    {
-      "imagem": 2,
+      "imagemId": 2,
       "titulo": "Sobre o contexto",
       "introducao" : [
          {
@@ -90,7 +90,7 @@
       }]      
    },
    {
-      "imagem": 3,
+      "imagemId": 3,
       "titulo": "Sobre a livro",
       "introducao" : [
          {
@@ -127,7 +127,7 @@
    },
    {
       "tipo": 1,
-      "imagem": 4,
+      "imagemId": 4,
       "introducao": [
          {
             "titulo": "Titulo de exemplo?",

@@ -1,14 +1,12 @@
-
-
-export interface Classificacao {
+export interface Rank {
    usuario: string
    pontos: number
 }
 
 export interface Fase {
    tipo: number
-   imagem: number
    titulo: string
+   imagemId: number
    questoes: Questao[]
    introducao: Introducao[]
 }
@@ -20,42 +18,32 @@ export interface Introducao {
 
 export interface Questao {
    texto: string
-   faseId: number
    opcoes: Opcao[]
 }
 
 export interface Opcao {
+   fase: string
    texto: string
    pontos: number
-   faseId: number
-   questaoId: number
+   questao: string
 }
 
-export interface Resposta {
-   texto: string
-   faseId: number
-   opcaoId: number
-   questaoId: number
-}
-
-export interface Progresso {
-   fase: Fase
-   passou: boolean
-   questao: Questao
+export interface Resposta { 
+   certo: boolean  
+   jogador: string
+   progresso: number
+   respondido: string
 }
 
 export interface Jogo {
-   fases: Fase[] 
+   content: Fase[] 
+   ranking: Rank[]
    imagens: string[]
-   classificacao: Classificacao[]
 }
 
 export interface Jogador {
-   id: string
    nome: string
-   faseId: number
-   questaoId: number
-   respostas: Resposta[]
-   pontuacao: number
-   ranking: number
+   pontos: number
+   progresso: number
+   respondidas: Resposta[]
 }

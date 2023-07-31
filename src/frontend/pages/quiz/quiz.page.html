@@ -1,19 +1,19 @@
 <quiz-header 
-   [username]="db.jogador.nome" 
-   [scoring]="db.jogador.pontuacao"
-   [ranking]="db.jogador.ranking || 1" />
+   [username]="now.jogador.nome" 
+   [scoring]="now.jogador.pontos"
+   [ranking]="now.classificacao || 1" />
 
 <ion-content [fullscreen]="true">
    <main class="container">
       <section id="status" *ngIf="!respondeu">
-         <b>Fase {{ db.jogador.faseId + 1 }} | </b>
-         <b>Questao {{ db.jogador.questaoId + 1 }}</b>
+         <b>Fase {{ now.progresso("fase") }} | </b>
+         <b>Questao {{ now.progresso("questao") }}</b>
       </section>
       
       <section *ngIf="!respondeu">      
-         <strong>{{ db.questao.texto }}</strong>
+         <strong>{{ now.questao.texto }}</strong>
          <button (click)="onResposta(opcao.texto)"
-            *ngFor="let opcao of db.questao.opcoes; let i=index;" [disabled]="loading" >
+            *ngFor="let opcao of now.questao.opcoes; let i=index;" [disabled]="loading" >
             <pre>{{ getLetra(i) }}</pre>
             <aside>{{ opcao.texto }}</aside>
          </button>

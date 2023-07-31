@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms'
 import { AppService } from 'services'
 import { FooterComponent, HeaderComponent } from 'components'
 import { Router } from '@angular/router'
-import { CacheService } from 'services/cache.service'
+import { NowService } from 'services/now.service'
 
 const imports = [IonicModule, CommonModule, 
    FormsModule, HeaderComponent, FooterComponent]
@@ -19,17 +19,17 @@ const imports = [IonicModule, CommonModule,
 }) export class IntroPage {
    public index = 0
 
-   constructor(app: AppService, private db: CacheService, private router: Router) { 
-      if (this.jogador.questaoId > 0) this.onLatest()
-      else app.changeBackground(db.imagem)
+   constructor(app: AppService, public now: NowService, private router: Router) { 
+      if (this.jogador.progresso > 0) this.pularIntroducao()
+      else app.changeBackground(now.imagem)
    }
 
-   public get total() { return this.db.fase.introducao.length }
+   public get total() { return this.now.fase.introducao.length }
 
-   public get jogador() { return this.db.jogador }
+   public get jogador() { return this.now.jogador }
 
    public get introducao() {
-      const fase = this.db.fase
+      const fase = this.now.fase
       const nome = this.jogador.nome
       const hour = new Date().getHours()
    
@@ -49,7 +49,7 @@ const imports = [IonicModule, CommonModule,
       return fase.introducao[this.index]
    }
 
-   public async onLatest() {
+   public async pularIntroducao() {
       await this.router.navigate(["/quiz"])
       this.index = 0
       console.log('index', this.index)
