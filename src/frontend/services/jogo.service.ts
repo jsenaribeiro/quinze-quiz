@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core"
-import { RestApi, Jogo, ApiService, Classificacao } from "commons"
+import { RestApi, Jogo, ApiService, Jogador } from "commons"
 import { JogadorService } from "./jogador.service"
 import { cache } from "commons/cache"
 
@@ -11,26 +11,26 @@ export class JogoService implements ApiService<Jogo> {
    
    public async search() { 
       const jogo = await RestApi.get<Jogo>('/jogo')
-      const jogadores = await this.jogadorApi.search()
-      const classificando = x => ({ usuario: x.nome, pontos: x.pontuacao })
-
-      jogo.classificacao = jogadores
-         .map(classificando)
-         .sort(classificacao)
-         
-      return cache('jogo', jogo)
+      return this.update(jogo)
    }
-   public create = (jogo: Jogo) => Promise.reject('Not implemented') 
 
-   public update = (jogo: Jogo) => Promise.reject('Not implemented') 
-   
+   public async update(jogo: Jogo) {
+      const jogadores = await RestApi.get<Jogador[]>('/jogadores')
+      
+      jogo.jogadores = jogadores.sort(classificacao)
+      jogo.jogadores.forEach((x, i) => x.ranking = i+1)
+
+      return cache('jogo', jogo)
+   }    
+
+   public create = (jogo: Jogo) => Promise.reject('Not implemented') 
    public delete = () => Promise.reject('Not implemented') 
 }
 
-function classificacao(a: Classificacao, b: Classificacao) {   
-   const [x,y] = [a.pontos, b.pontos]
-   const [i,j] = [a.usuario.charCodeAt(0), b.usuario.charCodeAt(0)]
-   const [m,n] = [a.usuario.length, b.usuario.length]
+function classificacao(a: Jogador, b: Jogador) {   
+   const [x,y] = [a.pontuacao, b.pontuacao]
+   const [i,j] = [a.nome.charCodeAt(0), b.nome.charCodeAt(0)]
+   const [m,n] = [a.nome.length, b.nome.length]
    const [A,B] = x != y ? [x,y] : i != j ? [i,j] : [m,n]
 
    return A > B ? -1 : A < B ? +1 : 0

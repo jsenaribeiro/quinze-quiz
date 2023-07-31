@@ -1,10 +1,3 @@
-
-
-export interface Classificacao {
-   usuario: string
-   pontos: number
-}
-
 export interface Fase {
    tipo: number
    imagem: number
@@ -47,7 +40,7 @@ export interface Progresso {
 export interface Jogo {
    fases: Fase[] 
    imagens: string[]
-   classificacao: Classificacao[]
+   jogadores: Jogador[]
 }
 
 export interface Jogador {
