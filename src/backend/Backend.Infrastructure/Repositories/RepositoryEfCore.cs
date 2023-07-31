@@ -1,11 +1,13 @@
 using System;
-using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Domain;
+using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure;
 
@@ -22,19 +24,23 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
    public RepositoryEfCore(IServiceProvider provider)
    {
       this.context = provider.GetRequiredService<Context>();
-
-      var property = typeof(DbSet<E>).Name;
-      
-      this.collection = (this.context
-         .GetType().GetProperties()
-         .First(x => x.PropertyType.Name == property)
-         .GetValue(this.context) as DbSet<E>)!;
-
       this.logger = provider.GetRequiredService<ILogger<E>>();
+
+      var property = typeof(DbSet<E>);
+      var identify = (Type type) => type.AssemblyQualifiedName;
+      var selected = (PropertyInfo prop) => identify(prop.PropertyType) == identify(property);
+      
+      var x = this.context.GetType();
+      var y = x.GetProperties();
+      var z = y.First(selected);
+
+      this.collection = (DbSet<E>) this.context.GetType()
+         .GetProperties().First(selected)
+         .GetValue(this.context)!;
    }
 
    public Task<E> LoadAsync(I identity) =>
-      this.collection.AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(identity));
+      this.collection.AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(identity))!;
 
    public Task<E[]> ListAsync(Expression<Func<E, bool>> condition) =>
       this.collection.AsNoTracking().Where(condition).AsQueryable().ToArrayAsync();
@@ -84,7 +90,7 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
             await AuditAsync(crud);
          }
 
-         return entities.Length == await context.SaveChangesAsync();
+         return true;
       }
       catch (Exception ex)
       {
@@ -106,7 +112,7 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
             }
          }
 
-         return identities.Length == await context.SaveChangesAsync();
+         return true;
       }
       catch (Exception ex)
       {
@@ -120,7 +126,7 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
    {
       if (crud != CRUD.Search)
       {
-         var audit = Audit.From<E>(crud, "System");
+         var audit = new Audit<E>(crud, "System");
          this.context.Audits.Add(audit);
       }
 

@@ -24,7 +24,7 @@ const imports = [IonicModule, CommonModule,
       else app.changeBackground(now.imagem)
    }
 
-   public get total() { return this.now.fase.introducao.length }
+   public get total() { return this.now.fase.introducoes.length }
 
    public get jogador() { return this.now.jogador }
 
@@ -41,12 +41,12 @@ const imports = [IonicModule, CommonModule,
          .replace("{JOGADOR}", nome)
          .replace("{SAUDACAO}", hora)
    
-      for (var i of fase.introducao) {
+      for (var i of fase.introducoes) {
          i.titulo = interpolando(i.titulo)
          i.texto = interpolando(i.texto)
       }
    
-      return fase.introducao[this.index]
+      return fase.introducoes[this.index]
    }
 
    public async pularIntroducao() {

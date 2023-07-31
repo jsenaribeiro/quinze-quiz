@@ -8,7 +8,7 @@ namespace Test;
 public class UsuarioTest
 {
    [TestMethod]
-   public void RepositoryAPI()
+   public void RepositoryTest()
    {
       var nome = "testing";
 

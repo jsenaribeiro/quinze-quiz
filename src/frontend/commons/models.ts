@@ -42,6 +42,7 @@ export interface Jogo {
 }
 
 export interface Jogador {
+   id: any
    nome: string
    pontos: number
    progresso: number

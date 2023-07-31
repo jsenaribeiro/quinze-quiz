@@ -8,14 +8,12 @@ namespace Test;
 
 public static class Settings
 {
-
    public static IServiceProvider CreateProvider()
    {
       Settings.Logs = new List<(LogLevel level, string message)>();
 
-      var services = new ServiceCollection();
-
-      services.AddSingleton<IUnitOfWork, UnitOfWork>()
+      var services = new ServiceCollection()
+         .AddSingleton<IUnitOfWork, UnitOfWork>()
          .AddDbContext<Context>(x => x.UseInMemoryDatabase("test"))
          .AddSingleton(typeof(ILogger<>), typeof(TestLogger<>));
 
