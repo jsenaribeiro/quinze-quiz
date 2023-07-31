@@ -1,6 +1,6 @@
-export interface Rank {
-   usuario: string
-   pontos: number
+export interface Ranking {
+   jogador: string
+   posicao: number
 }
 
 export interface Fase {
@@ -8,7 +8,7 @@ export interface Fase {
    titulo: string
    imagemId: number
    questoes: Questao[]
-   introducao: Introducao[]
+   introducoes: Introducao[]
 }
 
 export interface Introducao {
@@ -37,8 +37,8 @@ export interface Resposta {
 
 export interface Jogo {
    content: Fase[] 
-   ranking: Rank[]
    imagens: string[]
+   ranking: Ranking[]
 }
 
 export interface Jogador {
