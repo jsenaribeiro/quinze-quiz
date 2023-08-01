@@ -2,6 +2,8 @@ namespace Domain;
 
 public class Usuario : IEntity<Guid>
 {
+   public Usuario() { }
+
    public Usuario(string nome)
    {
       this.Nome = nome;

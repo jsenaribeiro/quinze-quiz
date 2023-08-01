@@ -13,7 +13,6 @@ public class Audit
    public DateTime When { get; set; }
 
    public string Type { get; set; } = string.Empty;
-
 }
 
 public class Audit<E> : Audit where E : class

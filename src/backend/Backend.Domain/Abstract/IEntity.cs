@@ -2,8 +2,8 @@ using System;
 
 namespace Domain;
 
-public interface IEntity<I> where I : struct, IEquatable<I>
+public interface IEntity<I> 
 {
-   I Id { get; }
+   I Id { get; set; }
 }
 

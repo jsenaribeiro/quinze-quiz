@@ -50,14 +50,15 @@ public class UsuarioTest
 
       unitOfWork.Usuarios
          .ListAsync(x => x.Id == guid)
-         .Result.Any(x => x.Id == guid);
+         .Result.Any(x => x.Id == guid)
+         .ShouldBeTrue();
 
       unitOfWork.Usuarios
          .ListAsync(x => x.Nome == nome)
          .Result.Length.ShouldBe(1);
 
       unitOfWork.Usuarios
-         .DropAsync(x => x.Nome == nome)
+         .DropAsync(x => x.Nome == "test")
          .Result.ShouldBeTrue();
 
       unitOfWork.Usuarios

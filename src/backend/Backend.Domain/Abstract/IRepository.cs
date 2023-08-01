@@ -3,10 +3,13 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace Domain;
 
-public interface IReadRepository<E, I> where E : class, IEntity<I> where I : struct, IEquatable<I>
+public interface IReadRepository<E, I> 
+   where E : class, IEntity<I> 
+   where I : struct, IEquatable<I>
 {
    Task<E> LoadAsync(I identity);
 
@@ -38,16 +41,18 @@ public interface IReadRepository<E, I> where E : class, IEntity<I> where I : str
    Task<int> CountAsync() => this.CountAsync(x => true);
 }
 
-public interface IWriteRepository<E, I> where E : class, IEntity<I> where I : struct, IEquatable<I>
+public interface IWriteRepository<E, I> 
+   where E : class, IEntity<I> 
+   where I : struct, IEquatable<I>
 {
    Task<bool> SaveAsync(params E[] entities);
 
-   Task<bool> DropAsync(params I[] identities);
+   Task<bool> DropAsync(Expression<Func<E, bool>> where);
 
    // default implementation overloads
 
-   Task<bool> DropAsync(params E[] entities) => 
-      this.DropAsync(entities.Select(x => x.Id).ToArray());
+   Task<bool> DropAsync(params I[] identities) =>
+      this.DropAsync(x => identities.Contains(x.Id));
 }
 
 public interface IRepository<E, I> 
@@ -57,11 +62,16 @@ public interface IRepository<E, I>
    where I : struct, IEquatable<I>
 {    
    Task<bool> SaveAsync(I identity, Action<E> action) =>
-      this.SaveAsync(this.ListAsync(x => x.Id.Equals(identity)).Result);
+      this.SaveAsync(x => x.Id.Equals(identity), action);
 
-   Task<bool> SaveAsync(Expression<Func<E, bool>> where, Action<E> action) =>
-      this.SaveAsync(this.ListAsync(where).Result);
-   
-   Task<bool> DropAsync(Expression<Func<E, bool>> where) =>
-      this.DropAsync(this.ListAsync(where).Result);
+   Task<bool> SaveAsync(Expression<Func<E, bool>> where, Action<E> action)
+   {
+      var result = this.ListAsync(where).Result.Select(x => 
+      {
+         action(x);
+         return x;
+      });
+
+      return this.SaveAsync(result.ToArray());
+   }      
 }

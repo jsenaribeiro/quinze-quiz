@@ -11,7 +11,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure;
 
-public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
+public abstract class RepositoryEfCore<E, I> 
+           : IRepository<E, I>
    where E : class, IEntity<I>
    where I : struct, IEquatable<I>
 {
@@ -29,12 +30,12 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
       var property = typeof(DbSet<E>);
       var identify = (Type type) => type.AssemblyQualifiedName;
       var selected = (PropertyInfo prop) => identify(prop.PropertyType) == identify(property);
-      
+
       var x = this.context.GetType();
       var y = x.GetProperties();
       var z = y.First(selected);
 
-      this.collection = (DbSet<E>) this.context.GetType()
+      this.collection = (DbSet<E>)this.context.GetType()
          .GetProperties().First(selected)
          .GetValue(this.context)!;
    }
@@ -53,6 +54,7 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
       while (index == 0 || value is not null)
       {
          value = await this.collection
+            .AsNoTracking()
             .Where(condition)
             .Skip(index).Take(1)
             .FirstOrDefaultAsync();
@@ -65,8 +67,8 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
    }
 
    public Task<bool> CheckAsync(Expression<Func<E, bool>> condition, bool every) =>
-      every ? this.collection.AllAsync(condition)
-            : this.collection.AnyAsync(condition);
+      every ? this.collection.AsNoTracking().AllAsync(condition)
+            : this.collection.AsNoTracking().AnyAsync(condition);
 
    public Task<int> CountAsync(Expression<Func<E, bool>> condition) =>
       this.collection.CountAsync(condition);
@@ -90,6 +92,8 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
             await AuditAsync(crud);
          }
 
+         await this.context.SaveChangesAsync();
+
          return true;
       }
       catch (Exception ex)
@@ -99,18 +103,14 @@ public abstract class RepositoryEfCore<E, I> : IRepository<E, I>
          throw ApiException.Database;
       }
    }
-   public async Task<bool> DropAsync(params I[] identities)
+
+   public async Task<bool> DropAsync(Expression<Func<E, bool>> condition)
    {
       try
       {
-         foreach (var identity in identities)
-         {
-            if (new { Id = identity } is E uid)
-            {
-               collection.Remove(uid);
-               await AuditAsync(CRUD.Delete);
-            }
-         }
+         this.context.RemoveRange(this.collection.Where(condition));
+
+         await this.context.SaveChangesAsync();
 
          return true;
       }
