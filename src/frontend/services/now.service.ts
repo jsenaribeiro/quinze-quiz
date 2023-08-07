@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core"
 import { JogadorService } from "./jogador.service"
 import { JogoService } from "./jogo.service"
-import { Fase, Opcao, Questao } from "commons"
 import { cache } from "commons/cache"
 
 interface IndexValue<T> { name: string, list: T[], text: string }
@@ -31,8 +30,7 @@ export class NowService {
 
    public get classificacao() { 
       const query = x => x.usuario == this.jogador.nome
-      const index = this.jogo.ranking.findIndex
-      return (index(query) ?? 0) + 1
+      return this.jogo.ranking.findIndex(query) + 1
    }
 
    public progresso = (field: "fase"|"questao") => 

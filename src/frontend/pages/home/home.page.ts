@@ -13,7 +13,7 @@ import { ApiService, AppService, JogadorService } from 'services'
    styleUrls: ['home.page.css'],
    imports: [IonicModule, CommonModule, FormsModule],
 }) export class HomePage {
-   constructor(app: AppService, private api: ApiService, private router: Router) { 
+   constructor(private app: AppService, private router: Router) { 
       // if (service.user?.nome) return      TODO:!
       app.changeBackground('bg-app.jpg')
       this.isProduction = environments.production
@@ -24,8 +24,9 @@ import { ApiService, AppService, JogadorService } from 'services'
    public isProduction = false
 
    public async onClick() {
-      await this.api.jogo.search()
-      await this.api.jogador.search(this.usuario)      
+      const that = this
+      await this.app.api.jogo.search()
+      await this.app.api.jogador.search(this.usuario)
       await this.router.navigate(['/intro'])
    }   
 }

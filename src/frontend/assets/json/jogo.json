@@ -9,11 +9,11 @@
    "ranking": [
       { "nome": "Fulano Tal", "pontuacao": 0 }
    ],
-   "fases" : [{
+   "content" : [{
       "tipo": 0,
       "imagemId": 1,
       "titulo": "Sobre a autora",
-      "introducao" : [
+      "introducoes" : [
          {
             "titulo": "{SAUDACAO}, {JOGADOR}!",
             "texto": "Nesta primeira fase do game, você vai conhecer um pouco sobre a vida de Rachel de Queiroz, autora da obra O Quinze."
@@ -108,7 +108,7 @@
       "tipo": 0,
       "imagemId": 2,
       "titulo": "Sobre o contexto",
-      "introducao" : [
+      "introducoes" : [
          {
             "titulo": "{SAUDACAO}, {JOGADOR}!",
             "texto": "Nesta segunda fase do game, você vai conhecer um pouco sobre o contexto histórico da obra O Quinze."
@@ -197,7 +197,7 @@
       "tipo": 0,
       "imagemId": 3,
       "titulo": "Sobre a livro",
-      "introducao" : [
+      "introducoes" : [
          {
             "titulo": "{SAUDACAO}, {JOGADOR}!",
             "texto": "Nesta terceira fase do game, você vai conhecer um pouco sobre a narrativa da obra O Quinze."
@@ -287,7 +287,7 @@
    {
       "tipo": 1,
       "imagemId": 4,
-      "introducao": [
+      "introducoes": [
          {
             "titulo": "Titulo de exemplo?",
             "texto": "Esse é um parágrafo de exemplo para a fase final"

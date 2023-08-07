@@ -14,8 +14,11 @@ export class JogadorService implements ApiService<Jogador> {
    public search(nome: string): Promise<Jogador>
    public async search(nome: string | undefined = undefined): Promise<Jogador | Jogador[]> {
       const jogadores = await RestApi.get<Jogador[]>("/jogadores")
+      const jogador = nome ? jogadores.find(x => x.nome) : undefined
 
-      return nome ? jogadores.find(x => x.nome)! : jogadores
+      if (jogador) cache('jogador', jogador)
+
+      return jogador || jogadores
    }
 
    public create = (jogador: Jogador) => RestApi.post(`/jogadores`, jogador, true) 

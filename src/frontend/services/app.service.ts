@@ -1,9 +1,10 @@
 import { Injectable } from "@angular/core"
 import { NowService } from "./now.service"
+import { ApiService } from "./api.service"
 
 @Injectable({providedIn: 'root'})
 export class AppService{
-   constructor(private now: NowService ){}
+   constructor(public now: NowService, public api: ApiService){}
 
    public changeBackground(filename: string = "") {
       filename = filename || this.now.imagem
