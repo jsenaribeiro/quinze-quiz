@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure;
 
-public class Context : DbContext
+public class ApiContext : DbContext
 {
-   public Context(DbContextOptions<Context> options): base(options) { }
+   public ApiContext(DbContextOptions<ApiContext> options): base(options) { }
 
    public virtual DbSet<Audit> Audits { get; set; }
 

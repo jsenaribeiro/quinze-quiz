@@ -16,7 +16,7 @@ public abstract class RepositoryEfCore<E, I>
    where E : class, IEntity<I>
    where I : struct, IEquatable<I>
 {
-   private readonly Context context;
+   private readonly ApiContext context;
 
    private readonly ILogger<E> logger;
 
@@ -24,7 +24,7 @@ public abstract class RepositoryEfCore<E, I>
 
    public RepositoryEfCore(IServiceProvider provider)
    {
-      this.context = provider.GetRequiredService<Context>();
+      this.context = provider.GetRequiredService<ApiContext>();
       this.logger = provider.GetRequiredService<ILogger<E>>();
 
       var property = typeof(DbSet<E>);

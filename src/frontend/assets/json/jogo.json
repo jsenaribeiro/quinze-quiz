@@ -293,23 +293,88 @@
             "texto": "Esse é um parágrafo de exemplo para a fase final"
          }
       ],
-      "questoes": [{         
-         "texto": "Pergunta 1 de exemplo da fase final",
-         "opcoes": [
-            { "texto": "Opcao 1", "pontos": 0 },
-            { "texto": "Opcao 2", "pontos": 1 },
-            { "texto": "Opcao 3", "pontos": 2 },
-            { "texto": "Opcao 4", "pontos": 3 }
-         ]
-      },
-      {         
-         "texto": "Pergunta 2 de exemplo da fase final",
-         "opcoes": [
-            { "texto": "Opcao 1", "pontos": 0 },
-            { "texto": "Opcao 2", "pontos": 1 },
-            { "texto": "Opcao 3", "pontos": 2 },
-            { "texto": "Opcao 4", "pontos": 3 }
-         ]
-      }]
+      "questoes": [
+         {
+            "texto":"DEPOIS de se benzer e de beijar duas vezes a medalhinha de São José, dona Inácia concluiu:<br/>“Dignai-vos ouvir nossas súplicas, ó castíssimo esposo da Virgem Maria, e alcançai o que rogamos. Amém.” <br/> Vendo a avó sair do quarto do santuário, Conceição, que fazia as tranças sentada numa rede ao canto da sala, interpelou-a: <br/> — E nem chove, hein, Mãe Nácia? Já chegou o fim do mês... Nem por você fazer tanta novena... <br/>Dona Inácia levantou para o telhado os olhos confiantes:<br/>— Tenho fé em São José que ainda chove! Tem-se visto inverno começar até em abril (O QUINZE, 2012, p. 12).<br/><br/>De acordo com as palavras da personagem dona Inácia o que se pode concluir? ", 
+            "complemento": "Que palavras ou expressões da avó de Conceição justificam sua resposta?", 
+            "opcoes": [
+               {"texto":"que a esperança de chuva é motivada pela fé em São José", "pontos":1},
+               {"texto":"que a esperança de chuva não se atém a fatores científicos, mas à fé", "pontos":5},
+               {"texto":"que a esperança de chuva é ocasionada pela fé em um único santo", "pontos":1}
+            ]
+         },{
+            "texto":"Conceição tinha vinte e dois anos e não falava em casar. As suas poucas tentativas de namoro tinham-se ido embora com os dezoito anos e o tempo de normalista; dizia alegremente que nascera solteirona. Ouvindo isso, a avó encolhia os ombros e sentenciava que mulher que não casa é um aleijão...<br/>— Esta menina tem umas ideias! (O QUINZE, 2012, p. 13).<br/><br/>De acordo com as palavras da autora sobre dona Inácia e, também, de acordo com a própria fala da avó de Conceição, o que se pode concluir?", 
+            "complemento": "Que palavras ou expressões sobre dona Inácia e, também, na fala da avó de Conceição justificam sua resposta?", 
+            "opcoes": [
+               {"texto":"A avó de conceição, contra a vontade da neta, queria que ela se casasse", "pontos":1},
+               {"texto":"A avó de conceição, dada a idade da neta, preocupava-se muito com ela", "pontos":1},
+               {"texto":"A avó de conceição, apesar de ser mulher, tinha posicionamento machista", "pontos":5}
+            ]
+         },{
+            "texto":"[...] Conceição talvez tivesse umas ideias; [...] Chegara até a se arriscar em leituras socialistas, e justamente dessas leituras é que lhe saíam as piores das tais ideias, estranhas e absurdas à avó. Acostumada a pensar por si, a viver isolada, criara para o seu uso ideias e preconceitos próprios, às vezes largos, às vezes ousados, e que pecavam principalmente pela excessiva marca de casa (O QUINZE, 2012, p. 13). De acordo com as palavras da autora, é possível identificar qual tipo de discurso manifestado nos hábitos de Conceição?", 
+            "complemento": "Que palavras ou expressões na fala da autora justificam sua resposta?", 
+            "opcoes": [
+               {"texto":"Discurso de ódio", "pontos":0},
+               {"texto":"Discurso de empoderamento feminino", "pontos":5},
+               {"texto":"Discurso de preconceito", "pontos":0}
+            ]
+         },{
+            "texto":"Já Vicente sentado, Conceição dizia:<br/>— Que sol horrível! Não sei como não cega a gente... Já estou preta e descascando, só do mormaço.<br/>— Quanto mais eu, que passo o dia a cavalo...<br/>A velha interveio:<br/>— Mas você não é moreno como Conceição. Branco leva sol, fica corado; preto fica cinzento...<br/>Vicente riu; deu um balanço na rede, e falou no que o trouxera ao Logradouro [...] (O QUINZE, 2012, p. 16)<br/><br/>De acordo com a fala da personagem dona Inácia e, também, de acordo com as palavras da autora sobre Vicente, o que se pode concluir?", 
+            "complemento": "etc...", 
+            "opcoes": [
+               {"texto":"Devido à seca daquele ano, a temperatura estava muito elevada por causa do sol forte.", "pontos":1},
+               {"texto":"A conversa entre os personagens sobre a temperatura elevada revela um discurso racista.", "pontos":5},
+               {"texto":"Conceição, devido ao sol forte, reclama da temperatura elevada para sua avó e para Vicente.", "pontos":1}
+            ]
+         },{
+            "texto":"Ainda sob a impressão da conversa com a Chiquinha Boa, a moça pensava em Vicente. E novamente sofreu o sentimento de desilusão e despeito que a magoara quando a mulher falava. “Sim, senhor! Vivia de prosear com as caboclas e até falavam muito dele com a Zefa do Zé Bernardo!”. E ela, que o supunha indiferente e distante, e imaginava que, aos olhos dele, todo o resto das mulheres deste mundo se esbatia numa massa confusa e indesejada... Que julgara ter sido ela quem lhe acordara o interesse arisco e desdenhoso do coração!... “Uma cabra, uma cunhã à toa, de cabelo pixaim e dente podre!...” (O QUINZE, 2012, p. 37).<br/><br/>Que tipo de discurso se verifica na fala da personagem Conceição?", 
+            "complemento": "etc...", 
+            "opcoes": [
+               {"texto":"Discurso racista", "pontos":0},
+               {"texto":"Discurso machista", "pontos":0},
+               {"texto":"Discurso preconceituoso", "pontos":5}
+            ]
+         },{
+            "texto":"Conceição foi mudar de roupa.<br/>Mas voltou, sacudindo os cabelos soltos, com os grampos na mão.<br/>— A Chiquinha me contou também uma coisa engraçada... Engraçada, não... tola...<br/>Diz que estão falando muito do Vicente com a Josefa do Zé Bernardo...<br/>A avó levantou os olhos:<br/>— Eu já tinha ouvido dizer... Tolice de rapaz!<br/>A moça exaltou-se, torcendo nervosamente os cabelos num coque no alto da cabeça:<br/>— Tolice, não senhora! Então Mãe Nácia acha uma tolice um moço branco andar se sujando com negras?<br/>Dona Inácia sorriu, conciliadora:<br/>— Mas, minha filha, isso acontece com todos... Homem branco, no sertão — sempre saem essas histórias... Além disso não é uma negra; é uma caboclinha clara...<br/>— Pois eu acho uma falta de vergonha! E o Vicente, todo santinho, é pior do que os outros! A gente é morrendo e aprendendo! (O QUINZE, 2012, p. 38)<br/><br/>A partir das palavras e expressões destacadas nas falas das personagens, que tipo de discurso se manifesta?", 
+            "complemento": "etc...", 
+            "opcoes": [
+               {"texto":"Discurso racista", "pontos":5},
+               {"texto":"Discurso de empoderamento feminino", "pontos":0},
+               {"texto":"Discurso de preconceito", "pontos":0}
+            ]
+         },{
+            "texto":"Subitamente, Conceição teve uma ideia:<br/>— Por que vocês não vão para São Paulo? Diz que lá é muito bom... Trabalho por toda parte, clima sadio... Podem até enriquecer... [...] Chico Bento ajuntou:<br/>— Eu já tenho ouvido contar muita coisa boa do São Paulo. Terra de dinheiro, de café, cheia de marinheiro... Conceição levantou-se, rebatendo o vestido:<br/>— Pois então está dito: São Paulo! Vou tratar de obter as passagens. Quero ver se daqui a alguns anos voltam ricos... (O QUINZE, 2012, p. 61)<br/><br/>Por meio das vozes das personagens Conceição e Chico Bento, que tipo de discurso de verifica?", 
+            "complemento": "etc...", 
+            "opcoes": [
+               {"texto":"o discurso de senso comum que caracteriza a migração como solução para os problemas de desemprego e, consequentemente, de uma vida melhor", "pontos":5},
+               {"texto":"o discurso de preconceito que caracteriza a migração como solução para os problemas de desemprego e, consequentemente, de uma vida melhor", "pontos":0},
+               {"texto":"o discurso xenofóbico que caracteriza a migração como solução para os problemas de desemprego e, consequentemente, de uma vida melhor Que palavras ou expressões na fala das personagens justificam sua resposta?", "pontos":0}
+            ]
+         },{
+            "texto":"Iam para o desconhecido, para um barracão de emigrantes, para uma escravidão de colonos... Iam para o destino, que os chamara de tão longe, das terras secas e fulvas de Quixadá, e os trouxera entre a fome e mortes, e angústias infinitas, para os conduzir agora, por cima da água do mar, às terras longínquas onde sempre há farinha e sempre há inverno... (O QUINZE, 2012, p. 64)<br/><br/>Por meio da voz da autora, o que se pode concluir?", 
+            "complemento": "etc...", 
+            "opcoes": [
+               {"texto":"a autora contradiz o senso comum de que a migração seria a solução para os problemas de desemprego e, consequentemente, para uma vida melhor para o sertanejo que vive castigado pela seca no Nordeste.", "pontos":5},
+               {"texto":"a autora concorda com o senso comum de que a migração seria a solução para os problemas de desemprego e, consequentemente, para uma vida melhor para o sertanejo que vive castigado pela seca no Nordeste.", "pontos":0},
+               {"texto":"a autora ratifica o senso comum de que a migração seria a solução para os problemas de desemprego, mas não vê uma vida melhor para o sertanejo que vive castigado pela seca no Nordeste.", "pontos":0}
+            ]
+         },{
+            "texto":"[...]<br/>— Já de volta, Mãe Nácia?<br/>— E você sem largar esse livro! Até em hora de missa!<br/>[...]<br/>— Mãe Nácia, quando a gente renuncia a certas obrigações, casa, filhos, família, tem que arranjar outras coisas com que se preocupe... Senão a vida fica vazia demais... (O QUINZE, 2012, p. 69)<br/><br/>Por meio da voz da personagem Conceição, que tipo de discurso de verifica?", 
+            "complemento": "Que palavras ou expressões na fala das personagens justificam sua resposta?", 
+            "opcoes":[
+               {"texto":"Discurso machista", "pontos":0},
+               {"texto":"Discurso de empoderamento feminino", "pontos":5},
+               {"texto":"Discurso de ódio", "pontos":0}
+            ]
+         },{
+            "texto":"— Ora o amor!... Essa história de amor, absoluto e incoerente, é muito difícil de achar... eu, pelo menos nunca o vi... o que vejo, por aí, é um instinto de aproximação muito obscuro e tímido, a que a gente obedece conforme as conveniências... Aliás, não falo por mim... que eu, nem esse instinto... Tenho a certeza de que nasci para viver só... (O QUINZE, 2012, p. 81)<br/><br/>A partir das palavras e expressões destacadas nas falas da autora e da personagem, que tipo de discurso se manifesta?", 
+            "complemento": "etc...", 
+            "opcoes": [
+               {"texto":"Machista", "pontos":0},
+               {"texto":"Feminista", "pontos":5},
+               {"texto":"Preconceituoso", "pontos":0}
+            ]
+         }
+      ]
    }]
 }
